@@ -77,6 +77,7 @@ public class newsletterServlet extends HttpServlet {
             error = e.getMessage();
             hasError = true;
         } finally {
+            in.close();
             if (hasError) {
                 AuditHandler audit = new AuditHandler(error, "newsletterServlet", "Exception caught", request.getSession().getId());
                 try {

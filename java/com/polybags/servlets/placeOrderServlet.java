@@ -142,6 +142,7 @@ public class placeOrderServlet extends HttpServlet {
                 error = e.getMessage();
                 hasError = true;
             } finally {
+                in.close();
                 if (hasError) {
 //                    if (!responseBasket.isEmpty()) {
 //

@@ -179,6 +179,8 @@ public class processPaymentServlet extends HttpServlet {
 
         } catch (IOException | NumberFormatException | SQLException | JSONException err) {
             err.printStackTrace();
+        }finally{
+            in.close();
         }
     }
 
